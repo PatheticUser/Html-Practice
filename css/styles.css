@@ -1,0 +1,249 @@
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container to keep everything centered */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  font-size: 1rem;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #8c8c8c;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(to bottom, #2d2d2d, #111);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+#hero h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* About Section */
+#about {
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Services Section */
+#services {
+  margin: 5rem 0;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.service-item p {
+  color: #666;
+  font-size: 1rem;
+  text-align: justify;
+  word-spacing: normal;
+  line-height: 1.5;
+}
+
+/* Achievements Section */
+#achievements {
+  background-color: #f0f4f8;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+
+#achievements ul {
+  list-style-type: none;
+}
+
+#achievements ul li {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+#achievements ul li::before {
+  content: "✔";
+  color: #00aaff;
+  position: absolute;
+  left: -25px;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+/* Employee Table Section */
+#employees {
+  margin-top: 4rem;
+}
+
+#employees table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#employees th,
+#employees td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#employees th {
+  background-color: #03131b;
+  color: #fff;
+  font-weight: 600;
+}
+
+#employees td {
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+
+  #services h2 {
+    font-size: 2rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 1.5rem;
+  }
+}
+
+
+
