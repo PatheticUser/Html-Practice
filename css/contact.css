@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8c8c8c;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Form Group */
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Input and Textarea */
+input, textarea {
+    font-size: 1rem;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #0056b3;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add floating effect on focus */
+input:focus + label, 
+textarea:focus + label {
+    color: #0056b3;
+    font-size: 0.9rem;
+    transform: translateY(-1.5rem);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button */
+button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, #0056b3, #003d80);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #003d80, #0056b3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Form Shadow Effect */
+#contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 86, 179, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #555;
+}
+
+footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
