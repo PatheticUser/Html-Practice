@@ -11,9 +11,34 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/site.webmanifest">
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Include the Lottie library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+  <style>
+    /* Styling for the loading animation */
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white; /* White background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure the loading animation is on top */
+    }
+
+  </style>
 </head>
 
 <body>
+  <!-- Lottie animation container -->
+  <div class="loading-container">
+    <div id="lottie-animation"></div>
+  </div>
+
   <div class="container">
     <header>
       <h1>Neuronix Labs</h1>
@@ -34,13 +59,8 @@
 
     <section id="about">
       <h2>About Us</h2>
-      <p>At Neuronix Labs, we specialize in creating AI-driven innovations that address real-world challenges. Our team
-        of engineers, data scientists, and AI experts work tirelessly to push the boundaries of what's possible. From
-        revolutionizing business operations to improving everyday life, our mission is to build smarter, more efficient,
-        and sustainable solutions.</p>
-      <p>Founded in 2020, Neuronix Labs has quickly become a leader in AI research, and we are continuously expanding
-        our reach. We partner with industries like healthcare, finance, manufacturing, and logistics, bringing AI
-        technologies that drive profitability and create value for society.</p>
+      <p>At Neuronix Labs, we specialize in creating AI-driven innovations that address real-world challenges. Our team of engineers, data scientists, and AI experts work tirelessly to push the boundaries of what's possible. From revolutionizing business operations to improving everyday life, our mission is to build smarter, more efficient, and sustainable solutions.</p>
+      <p>Founded in 2020, Neuronix Labs has quickly become a leader in AI research, and we are continuously expanding our reach. We partner with industries like healthcare, finance, manufacturing, and logistics, bringing AI technologies that drive profitability and create value for society.</p>
     </section>
 
     <section id="services">
@@ -48,40 +68,16 @@
       <ol class="service-grid">
         <li class="service-item">
           <h3>AI Consulting</h3>
-          <p>Our AI consulting services provide businesses with the expertise they need to integrate AI into their
-            operations effectively. From identifying key opportunities to developing AI strategies and implementing
-            solutions, we guide companies through the complexities of AI adoption.</p>
-          <p>Our team works closely with clients to understand their unique needs, designing tailored AI solutions that
-            align with their goals. Whether it's enhancing customer experience, optimizing supply chains, or leveraging
-            data for decision-making, we have the tools and knowledge to make it happen.</p>
         </li>
         <li class="service-item">
           <h3>Machine Learning</h3>
-          <p>Neuronix Labs leverages advanced machine learning techniques to build intelligent systems capable of
-            learning from data, making decisions, and predicting future trends. Our machine learning models are deployed
-            across a variety of industries, including healthcare, finance, and marketing.</p>
-          <p>We specialize in supervised, unsupervised, and reinforcement learning techniques, developing custom
-            solutions such as predictive analytics, recommendation engines, and anomaly detection systems. We help businesses unlock actionable insights, improve efficiency, and achieve better outcomes.</p>
         </li>
         <li class="service-item">
           <h3>Robotics and Automation</h3>
-          <p>Our robotics solutions are designed to optimize tasks through intelligent automation, improving operational
-            efficiency and reducing costs. We create robots that can adapt to their environment, perform complex tasks,
-            and interact with human workers seamlessly.</p>
-          <p>We offer robotics solutions for industries such as manufacturing, healthcare, logistics, and agriculture.
-            Our robots are equipped with cutting-edge AI algorithms to enable them to make real-time decisions, handle
-            unstructured data, and work in dynamic environments with minimal human intervention.</p>
         </li>
         <li class="service-item">
           <h3>NLP Solutions</h3>
-          <p>Our NLP solutions empower businesses to extract valuable insights from text data, enabling smarter customer
-            interactions, content analysis, and sentiment analysis. From chatbots to automated content generation, our
-            NLP systems can process and understand human language to enhance user experiences.</p>
-          <p>We specialize in building NLP models for sentiment analysis, language translation, chatbots, and
-            voice-activated systems. It allows us to craft solutions that bridge the gap between humans and
-            machines, driving automation and improving communication.</p>
         </li>
-
       </ol>
     </section>
 
@@ -141,6 +137,28 @@
       <p>© 2025 Neuronix Labs. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    // Load the Lottie animation
+    var animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'), // the DOM element to contain the animation
+      renderer: 'svg', // render the animation as SVG
+      loop: true, // set to true to make the animation loop
+      autoplay: true, // set to true to autoplay the animation
+      path: 'images/Animation - 1738049438776.json' // URL to the Lottie JSON file (replace this with your own URL or file path)
+    });
+
+    // Show the loader for 1000ms and then display the website content
+    window.addEventListener('load', function () {
+      setTimeout(function() {
+        // Hide the loading animation
+        document.querySelector('.loading-container').style.display = 'none';
+        
+        // Show the website content
+        document.body.style.display = 'block';
+      }, 1800); // 1000 milliseconds (1 second)
+    });
+  </script>
 </body>
 
 </html>
