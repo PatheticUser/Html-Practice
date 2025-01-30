@@ -14,11 +14,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white; /* White background */
+  background-color: white;
+  /* White background */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure the loading animation is on top */
+  z-index: 9999;
+  /* Ensure the loading animation is on top */
 }
 
 /* Global Styles */
@@ -73,6 +75,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #8c8c8c;
+
 }
 
 /* Hero Section */
@@ -114,26 +117,35 @@ nav ul li a:hover {
 
 /* Services */
 .service-card {
-  height: auto; /* Remove fixed height */
-  display: flex; /* Use flexbox for better layout control */
-  flex-direction: column; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover transition */
+  height: auto;
+  /* Remove fixed height */
+  display: flex;
+  /* Use flexbox for better layout control */
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Add smooth hover transition */
 }
 
 .service-card .card-img-top {
-  height: 200px; /* Set a reasonable maximum height for images */
-  object-fit: cover; 
-  width: 100%; /* Ensure images fill the card width */
+  height: 200px;
+  /* Set a reasonable maximum height for images */
+  object-fit: cover;
+  width: 100%;
+  /* Ensure images fill the card width */
 }
 
 .card-body {
-  flex-grow: 1; /* Allow the card body to grow to fill remaining space */
-  padding: 1.5rem; /* Adjust padding as needed */
+  flex-grow: 1;
+  /* Allow the card body to grow to fill remaining space */
+  padding: 1.5rem;
+  /* Adjust padding as needed */
 }
 
 .service-card:hover {
-  transform: translateY(-5px); /* Subtle lift effect on hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add a soft shadow on hover */
+  transform: translateY(-5px);
+  /* Subtle lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Add a soft shadow on hover */
 }
 
 
