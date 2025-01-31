@@ -53,14 +53,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 2rem;
-}
 
 nav ul li a {
   font-size: 1rem;
