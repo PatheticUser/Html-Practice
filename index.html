@@ -17,245 +17,310 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
   <style>
     .team-member {
-        transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
+
     .team-member:hover {
-        transform: scale(1.05);
+      transform: scale(1.05);
     }
-</style>
-
-</head>
-
-<body>
-  <!-- Lottie animation container -->
-  <div class="loading-container">
-    <div id="lottie-animation"></div>
-  </div>
-
-  <div class="container">
-    <header>
-      <h1>Neuronix Labs</h1>
-      <nav>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="gallery.html">Products</a></li>
-          <li><a href="#about">Articles</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="hero">
-      <h2>Innovating the Future with Artificial Intelligence</h2>
-      <p>Neuronix Labs is dedicated to developing cutting-edge AI solutions to shape a smarter world.</p>
-    </section>
     
-    <section id="services" class="container">
-      <h2 class="text-center mb-5">Our Services</h2>
+    .navbar-brand {
+        font-size: 2rem;
+        /* Increase font size */
+        font-family: 'Arial', serif;
+        /* Elegant font */
+      }
 
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s1.png" class="card-img-top img-fluid" alt="Data Cleaning and Preparation Image">
-            <div class="card-body">
-              <h3 class="card-title">Data Cleaning & Preparation</h3>
-              <p class="card-text">Ensuring high-quality data for optimal AI/ML model performance.</p>
-              <a href="data-cleaning.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+      .navbar-nav .nav-link {
+        font-family: 'Arial', sans-serif;
+        /* Optional elegant font for nav links */
+      }
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s2.webp" class="card-img-top img-fluid" alt="AI Deployment Image">
-            <div class="card-body">
-              <h3 class="card-title">AI Deployment & Integration</h3>
-              <p class="card-text">Seamlessly integrating AI models into your existing systems.</p>
-              <a href="ai-deployment.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+      /* Sticky navbar and header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white;
+      }
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s3.jpg" class="card-img-top img-fluid" alt="Model Training & Development Image">
-            <div class="card-body">
-              <h3 class="card-title">Model Training & Development</h3>
-              <p class="card-text">Building and fine-tuning custom AI/ML models for your specific needs.</p>
-              <a href="model-training.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+      .navbar {
+        margin-bottom: 0;
+      }
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s4.png" class="card-img-top img-fluid" alt="AI/ML Consulting & Strategy Image">
-            <div class="card-body">
-              <h3 class="card-title">AI/ML Consulting & Strategy</h3>
-              <p class="card-text">Developing AI/ML strategies to achieve your business objectives.</p>
-              <a href="ai-ml-consulting.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+      .container {
+        padding-top: 80px;
+        /* Added padding to prevent content from being hidden under the fixed navbar */
+      }
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s5.webp" class="card-img-top img-fluid" alt="AI/ML-Powered Products & Platforms Image">
-            <div class="card-body">
-              <h3 class="card-title">AI Powered Products & Platforms</h3>
-              <p class="card-text">Developing innovative AI/ML-driven products and platforms.</p>
-              <a href="ai-ml-products.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+      /* Mobile view navbar - Align links to the left */
+      @media (max-width: 768px) {
+        .navbar-collapse {
+          text-align: left;
+        }
+      }
+    </style>
+    </head>
 
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s6.png" class="card-img-top img-fluid" alt="AI/ML Education & Training Image">
-            <div class="card-body">
-              <h3 class="card-title">AI/ML Education & Training</h3>
-              <p class="card-text">Empowering your team with AI/ML knowledge and skills. Equipping your team to apply
-                solutions to real-world challenges..</p>
-              <a href="ai-ml-education.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s7.png" class="card-img-top img-fluid" alt="Predictive Analytics">
-            <div class="card-body">
-              <h3 class="card-title">Predictive Analytics & Probabilty Detection</h3>
-              <p class="card-text">Forecasting future trends and outcomes, Identifying potential risks and opportunities
-              </p>
-              <a href="predictive-analytics.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s8.jpg" class="card-img-top img-fluid" alt="AI/ML-Powered Automation">
-            <div class="card-body">
-              <h3 class="card-title">AI/ML-Powered Automation</h3>
-              <p class="card-text">Automating tasks and processes for increased efficiency, reducing manual effort</p>
-              <a href="ai-ml-automation.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card service-card">
-            <img src="images/s9.png" class="card-img-top img-fluid" alt="Computer Vision Solutions">
-            <div class="card-body">
-              <h3 class="card-title">Computer Vision Solutions</h3>
-              <p class="card-text">Image and video analysis for applications like object detection, facial recognition,
-                and medical imaging</p>
-              <a href="computer-vision.html" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+    <body>
+      <!-- Lottie animation container -->
+      <div class="loading-container">
+        <div id="lottie-animation"></div>
       </div>
-    </section>
 
-    
-    <section id="achievements">
-      <h2>Achievements</h2>
-      <p>We’ve been recognized for our impactful contributions to AI technology:</p>
-      <ul>
-        <li>Awarded Best AI Startup of 2024 for our innovative solutions.</li>
-        <li>Developed the first AI-driven disaster response system in the region, improving the speed and accuracy of
-          emergency responses.</li>
-        <li>Partnered with over 50 companies to integrate AI into their workflows, driving efficiency and growth across
-          industries.</li>
-        <li>Collaborated with top research institutions to develop cutting-edge machine learning models for healthcare
-          applications.</li>
-        <li>Launched a suite of AI tools that reduced operational costs for our clients by up to 40% while enhancing
-          their data-driven decision-making capabilities.</li>
-      </ul>
-    </section>
+      <div class="container">
+        <!-- Sticky Navbar -->
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Neuronix Labs</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">Articles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
 
-    <div class="container mt-5">
-      <h2 class="text-center mb-4">Meet Our Team</h2>
-      <div class="row">
-          <div class="col-md-4">
-              <div class="card team-member text-center">
-                  <img src="images/rameez.jpg" class="card-img-top" alt="Muhammad Rameez">
-                  <div class="card-body">
-                      <h5 class="card-title">Muhammad Rameez</h5>
-                      <p class="card-text">CEO | CTO</p>
-                  </div>
+        <!-- Main Content -->
+        <section id="hero">
+          <h2>Innovating the Future with Artificial Intelligence</h2>
+          <p>Neuronix Labs is dedicated to developing cutting-edge AI solutions to shape a smarter world.</p>
+        </section>
+
+        <section id="services" class="container">
+          <h2 class="text-center mb-5">Our Services</h2>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s1.png" class="card-img-top img-fluid" alt="Data Cleaning and Preparation Image">
+                <div class="card-body">
+                  <h3 class="card-title">Data Cleaning & Preparation</h3>
+                  <p class="card-text">Ensuring high-quality data for optimal AI/ML model performance.</p>
+                  <a href="data-cleaning.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card team-member text-center">
-                  <img src="images/ayesha.jpg" class="card-img-top" alt="Ayesha Khan">
-                  <div class="card-body">
-                      <h5 class="card-title">Ayesha Khan</h5>
-                      <p class="card-text">Marketing Head</p>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s2.webp" class="card-img-top img-fluid" alt="AI Deployment Image">
+                <div class="card-body">
+                  <h3 class="card-title">AI Deployment & Integration</h3>
+                  <p class="card-text">Seamlessly integrating AI models into your existing systems.</p>
+                  <a href="ai-deployment.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
-          </div>
-          <div class="col-md-4">
-              <div class="card team-member text-center">
-                  <img src="images/ali.jpg" class="card-img-top" alt="Ali Hassan">
-                  <div class="card-body">
-                      <h5 class="card-title">Ali Hassan</h5>
-                      <p class="card-text">Lead Developer</p>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s3.jpg" class="card-img-top img-fluid" alt="Model Training & Development Image">
+                <div class="card-body">
+                  <h3 class="card-title">Model Training & Development</h3>
+                  <p class="card-text">Building and fine-tuning custom AI/ML models for your specific needs.</p>
+                  <a href="model-training.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
-          </div>
-          <div class="col-md-4 mt-4">
-              <div class="card team-member text-center">
-                  <img src="images/fatima.jpg" class="card-img-top" alt="Fatima Noor">
-                  <div class="card-body">
-                      <h5 class="card-title">Fatima Noor</h5>
-                      <p class="card-text">UI/UX Designer</p>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s4.png" class="card-img-top img-fluid" alt="AI/ML Consulting & Strategy Image">
+                <div class="card-body">
+                  <h3 class="card-title">AI/ML Consulting & Strategy</h3>
+                  <p class="card-text">Developing AI/ML strategies to achieve your business objectives.</p>
+                  <a href="ai-ml-consulting.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
-          </div>
-          <div class="col-md-4 mt-4">
-              <div class="card team-member text-center">
-                  <img src="images/omar.jpg" class="card-img-top" alt="Omar Farooq">
-                  <div class="card-body">
-                      <h5 class="card-title">Omar Farooq</h5>
-                      <p class="card-text">Project Manager</p>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s5.webp" class="card-img-top img-fluid" alt="AI/ML-Powered Products & Platforms Image">
+                <div class="card-body">
+                  <h3 class="card-title">AI Powered Products & Platforms</h3>
+                  <p class="card-text">Developing innovative AI/ML-driven products and platforms.</p>
+                  <a href="ai-ml-products.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
-          </div>
-          <div class="col-md-4 mt-4">
-              <div class="card team-member text-center">
-                  <img src="images/zain.jpg" class="card-img-top" alt="Zain Abbas">
-                  <div class="card-body">
-                      <h5 class="card-title">Zain Abbas</h5>
-                      <p class="card-text">Software Engineer</p>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s6.png" class="card-img-top img-fluid" alt="AI/ML Education & Training Image">
+                <div class="card-body">
+                  <h3 class="card-title">AI/ML Education & Training</h3>
+                  <p class="card-text">Empowering your team with AI/ML knowledge and skills. Equipping your team to
+                    apply
+                    solutions to real-world challenges..</p>
+                  <a href="ai-ml-education.html" class="btn btn-primary">Read More</a>
+                </div>
               </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s7.png" class="card-img-top img-fluid" alt="Predictive Analytics">
+                <div class="card-body">
+                  <h3 class="card-title">Predictive Analytics & Probabilty Detection</h3>
+                  <p class="card-text">Forecasting future trends and outcomes, Identifying potential risks and
+                    opportunities
+                  </p>
+                  <a href="predictive-analytics.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s8.jpg" class="card-img-top img-fluid" alt="AI/ML-Powered Automation">
+                <div class="card-body">
+                  <h3 class="card-title">AI/ML-Powered Automation</h3>
+                  <p class="card-text">Automating tasks and processes for increased efficiency, reducing manual effort
+                  </p>
+                  <a href="ai-ml-automation.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card service-card">
+                <img src="images/s9.png" class="card-img-top img-fluid" alt="Computer Vision Solutions">
+                <div class="card-body">
+                  <h3 class="card-title">Computer Vision Solutions</h3>
+                  <p class="card-text">Image and video analysis for applications like object detection, facial
+                    recognition,
+                    and medical imaging</p>
+                  <a href="computer-vision.html" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+
+
+        <section id="achievements">
+          <h2>Achievements</h2>
+          <p>We’ve been recognized for our impactful contributions to AI technology:</p>
+          <ul>
+            <li>Awarded Best AI Startup of 2024 for our innovative solutions.</li>
+            <li>Developed the first AI-driven disaster response system in the region, improving the speed and accuracy
+              of
+              emergency responses.</li>
+            <li>Partnered with over 50 companies to integrate AI into their workflows, driving efficiency and growth
+              across
+              industries.</li>
+            <li>Collaborated with top research institutions to develop cutting-edge machine learning models for
+              healthcare
+              applications.</li>
+            <li>Launched a suite of AI tools that reduced operational costs for our clients by up to 40% while enhancing
+              their data-driven decision-making capabilities.</li>
+          </ul>
+        </section>
+
+        <div class="container mt-5">
+          <h2 class="text-center mb-4">Meet Our Team</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card team-member text-center">
+                <img src="images/rameez.jpg" class="card-img-top" alt="Muhammad Rameez">
+                <div class="card-body">
+                  <h5 class="card-title">Muhammad Rameez</h5>
+                  <p class="card-text">CEO | CTO</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card team-member text-center">
+                <img src="images/ayesha.jpg" class="card-img-top" alt="Ayesha Khan">
+                <div class="card-body">
+                  <h5 class="card-title">Ayesha Khan</h5>
+                  <p class="card-text">Marketing Head</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card team-member text-center">
+                <img src="images/ali.jpg" class="card-img-top" alt="Ali Hassan">
+                <div class="card-body">
+                  <h5 class="card-title">Ali Hassan</h5>
+                  <p class="card-text">Lead Developer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-4">
+              <div class="card team-member text-center">
+                <img src="images/fatima.jpg" class="card-img-top" alt="Fatima Noor">
+                <div class="card-body">
+                  <h5 class="card-title">Fatima Noor</h5>
+                  <p class="card-text">UI/UX Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-4">
+              <div class="card team-member text-center">
+                <img src="images/omar.jpg" class="card-img-top" alt="Omar Farooq">
+                <div class="card-body">
+                  <h5 class="card-title">Omar Farooq</h5>
+                  <p class="card-text">Project Manager</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-4">
+              <div class="card team-member text-center">
+                <img src="images/zain.jpg" class="card-img-top" alt="Zain Abbas">
+                <div class="card-body">
+                  <h5 class="card-title">Zain Abbas</h5>
+                  <p class="card-text">Software Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="about">
+          <h2>About Us</h2>
+          <p>At Neuronix Labs, we specialize in creating AI-driven innovations that address real-world challenges. Our
+            team
+            of engineers, data scientists, and AI experts work tirelessly to push the boundaries of what's possible.
+            From
+            revolutionizing business operations to improving everyday life, our mission is to build smarter, more
+            efficient,
+            and sustainable solutions.</p>
+          <p>Founded in 2020, Neuronix Labs has quickly become a leader in AI research, and we are continuously
+            expanding
+            our reach. We partner with industries like healthcare, finance, manufacturing, and logistics, bringing AI
+            technologies that drive profitability and create value for society.</p>
+        </section>
+
+        <footer>
+          <p>© 2025 Neuronix Labs. All rights reserved.</p>
+        </footer>
       </div>
-  </div>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At Neuronix Labs, we specialize in creating AI-driven innovations that address real-world challenges. Our team
-      of engineers, data scientists, and AI experts work tirelessly to push the boundaries of what's possible. From
-      revolutionizing business operations to improving everyday life, our mission is to build smarter, more efficient,
-      and sustainable solutions.</p>
-    <p>Founded in 2020, Neuronix Labs has quickly become a leader in AI research, and we are continuously expanding
-      our reach. We partner with industries like healthcare, finance, manufacturing, and logistics, bringing AI
-      technologies that drive profitability and create value for society.</p>
-  </section>
-
-    <footer>
-      <p>© 2025 Neuronix Labs. All rights reserved.</p>
-    </footer>
-  </div>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 
-</body>
+    </body>
 
 </html>

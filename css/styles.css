@@ -15,12 +15,10 @@
   width: 100%;
   height: 100%;
   background-color: white;
-  /* White background */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* Ensure the loading animation is on top */
 }
 
 /* Global Styles */
@@ -32,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Container to keep everything centered */
+/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -66,7 +64,7 @@ nav ul li {
 
 nav ul li a {
   font-size: 1rem;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -75,7 +73,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #8c8c8c;
-
 }
 
 /* Hero Section */
@@ -115,69 +112,28 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
-/* Services */
+/* Service Cards */
 .service-card {
   height: auto;
-  /* Remove fixed height */
   display: flex;
-  /* Use flexbox for better layout control */
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Add smooth hover transition */
 }
 
 .service-card .card-img-top {
   height: 200px;
-  /* Set a reasonable maximum height for images */
   object-fit: cover;
   width: 100%;
-  /* Ensure images fill the card width */
 }
 
 .card-body {
   flex-grow: 1;
-  /* Allow the card body to grow to fill remaining space */
   padding: 1.5rem;
-  /* Adjust padding as needed */
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  /* Subtle lift effect on hover */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  /* Add a soft shadow on hover */
-}
-
-
-/* Employee Table Section */
-#employees {
-  margin-top: 4rem;
-}
-
-#employees table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2rem;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#employees th,
-#employees td {
-  padding: 1rem;
-  text-align: left;
-  font-size: 1rem;
-}
-
-#employees th {
-  background-color: #03131b;
-  color: #fff;
-  font-weight: 600;
-}
-
-#employees td {
-  border-bottom: 1px solid #e0e0e0;
-  color: #555;
 }
 
 /* Footer */
