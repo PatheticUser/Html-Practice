@@ -100,6 +100,48 @@
             /* Adjust as needed */
             transform: translateY(-50%);
         }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            /* Make cards take full height of their container */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            /* Ensure image covers the space */
+            height: 200px;
+            /* Set a fixed height for the image */
+            /* Or use max-height if you want to let the image grow up to a limit:
+            max-height: 200px; */
+        }
+
+        .card-body {
+            flex-grow: 1;
+            /* Allow card body to expand to fill remaining space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-text {
+            flex-grow: 1;
+            /* Allow description to take up available space */
+        }
+
+        .card .btn {
+            margin-top: auto;
+            /* Push the button to the bottom of the card body */
+        }
+
+        .row.g-4 {
+            --bs-gutter-x: 1.5rem;
+            /* Adjust gutter width as needed */
+            --bs-gutter-y: 1.5rem;
+            /* Adjust gutter height as needed */
+        }
+    </style>
     </style>
 </head>
 
