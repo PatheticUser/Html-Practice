@@ -33,8 +33,6 @@ body {
 Container .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
 }
 
 /* Header */
@@ -50,19 +48,6 @@ h1 {
   font-size: 2.5rem;
   color: #222;
   letter-spacing: 1px;
-}
-
-nav ul li a {
-  font-size: 1rem;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #8c8c8c;
 }
 
 /* Hero Section */
@@ -188,16 +173,6 @@ footer {
   }
 }
 
-.navbar-brand {
-  font-size: 2rem;
-  font-family: "Arial", serif;
-}
-
-.navbar-nav .nav-link {
-  font-family: "Arial", sans-serif;
-  /* Optional elegant font for nav links */
-}
-
 /* Sticky navbar and header */
 header {
   position: sticky;
@@ -206,18 +181,49 @@ header {
   background-color: white;
 }
 
-.navbar {
-  margin-bottom: 0;
-}
-
-.container {
-  padding-top: 55px;
-  /* Added padding to prevent content from being hidden under the fixed navbar */
-}
-
 /* Mobile view navbar - Align links to the left */
 @media (max-width: 768px) {
   .navbar-collapse {
     text-align: left;
   }
+}
+
+:root {
+  --primary-color: #2563eb;
+  --hover-color: #1d4ed8;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
 }

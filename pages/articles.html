@@ -23,6 +23,11 @@
             transition: transform 0.3s ease-in-out;
         }
 
+        .container {
+            padding-top: 55px;
+            /* Added padding to prevent content from being hidden under the fixed navbar */
+        }
+
         .article-card:hover {
             transform: scale(1.03);
         }
@@ -79,7 +84,6 @@
         </nav>
         <main class="mt-1 pt-1">
             <div class="container">
-                <h2 class="text-center my-4">Latest AI Articles</h2>
                 <div class="row">
                     <!-- AI & Computer Vision -->
                     <div class="col-md-6 col-lg-4 mb-4">
