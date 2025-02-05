@@ -48,7 +48,35 @@
             /* Prevents the wrapper from taking full width */
             display: inline-block;
         }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+        .search-cart-section {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 10px;
+        }
 
+        .search-input-wrapper {
+            max-width: 100%;
+        }
+
+        .cart-icon {
+            align-self: flex-end;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .search-input {
+            font-size: 14px;
+        }
+
+        .search-input-wrapper i {
+            right: 10px;
+        }
+    }
         .search-input {
             border-radius: 20px;
             padding-right: 35px;
@@ -178,7 +206,7 @@
         <div class="d-flex align-items-center gap-3">
             <div class="search-input-wrapper">
                 <input type="text" class="form-control search-input" placeholder="Search products..." id="searchInput">
-                <i class="fas fa-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                <i class="fas fa-search"></i>
             </div>
             <div class="cart-icon">
                 <i class="fas fa-shopping-cart"></i>

@@ -94,6 +94,9 @@
                 transform: rotate(360deg);
             }
         }
+        textarea {
+  resize: none; /* Prevents resizing */
+}
     </style>
 </head>
 
@@ -151,7 +154,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="message" class="form-label fw-medium">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            <textarea id="message"  resiz  name="message" class="form-control" rows="5" required></textarea>
                             <div class="invalid-feedback">Please enter your message</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">

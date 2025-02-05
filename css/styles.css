@@ -58,6 +58,7 @@ h1 {
   text-align: center;
   border-radius: 10px;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #hero h2 {
@@ -104,6 +105,7 @@ h1 {
 .card-body {
   flex-grow: 1;
   padding: 1.5rem;
+
 }
 
 .service-card:hover {
