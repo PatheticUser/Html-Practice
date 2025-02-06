@@ -48,35 +48,37 @@
             /* Prevents the wrapper from taking full width */
             display: inline-block;
         }
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-        .search-cart-section {
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-            left: 0;
-            right: 0;
-            padding: 10px;
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .search-cart-section {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                left: 0;
+                right: 0;
+                padding: 10px;
+            }
+
+            .search-input-wrapper {
+                max-width: 100%;
+            }
+
+            .cart-icon {
+                align-self: flex-end;
+            }
         }
 
-        .search-input-wrapper {
-            max-width: 100%;
+        @media (max-width: 480px) {
+            .search-input {
+                font-size: 14px;
+            }
+
+            .search-input-wrapper i {
+                right: 10px;
+            }
         }
 
-        .cart-icon {
-            align-self: flex-end;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .search-input {
-            font-size: 14px;
-        }
-
-        .search-input-wrapper i {
-            right: 10px;
-        }
-    }
         .search-input {
             border-radius: 20px;
             padding-right: 35px;
@@ -240,7 +242,7 @@
                 name: "DreamCanvas Studio",
                 description: "Transform your imagination into artwork with a text-to-image generator perfect for creators, marketers, and hobbyists.",
                 price: 49.99,
-                image: "../products/p1.webp"
+                image: "../products/p1.jpg"
             },
             {
                 name: "ModelForge Pro",
