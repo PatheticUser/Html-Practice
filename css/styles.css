@@ -21,6 +21,9 @@
   z-index: 9999;
 }
 
+html {
+      scroll-behavior: smooth;
+    }
 /* Global Styles */
 body {
   font-family: "Roboto", sans-serif;
